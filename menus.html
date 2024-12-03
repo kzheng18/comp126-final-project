@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE-edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Red Sun - Home</title>
+  <title>Red Sun - Menus</title>
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/styles.css" />
@@ -32,45 +32,6 @@
   <div class="preload" data-preload>
     <div class="circle"></div>
     <p class="text">Red Sun</p>
-  </div>
-
-  <!-- TOP BAR -->
-  <div class="top-bar">
-    <div class="container">
-      <address class="topbar-item">
-        <div class="icon">
-          <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
-        </div>
-        <span class="span">
-          Yincheng Rd, Lujiazui, Pudong, Shanghai, China, 200120
-        </span>
-      </address>
-
-      <div class="separator"></div>
-
-      <div class="topbar-item item-2">
-        <div class="icon">
-          <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-        </div>
-        <span class="span"> Daily : 11.00 am to 9.00 pm </span>
-      </div>
-
-      <a href="tel:+862161999766" class="topbar-item link">
-        <div class="icon">
-          <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
-        </div>
-        <span class="span"> +86 21 6142 9726 </span>
-      </a>
-
-      <div class="separator"></div>
-
-      <a href="mailto:booking@redsun.com" class="topbar-item link">
-        <div class="icon">
-          <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
-        </div>
-        <span class="span"> booking@redsun.com </span>
-      </a>
-    </div>
   </div>
 
   <!-- HEADER -->
@@ -101,14 +62,14 @@
 
         <ul class="navbar-list">
           <li class="navbar-item">
-            <a href="index.html" class="navbar-link hover-underline active">
+            <a href="index.html" class="navbar-link hover-underline">
               <div class="separator"></div>
               <span class="span">Home</span>
             </a>
           </li>
 
           <li class="navbar-item">
-            <a href="menus.html" class="navbar-link hover-underline">
+            <a href="menus.html" class="navbar-link hover-underline active">
               <div class="separator"></div>
               <span class="span">Menus</span>
             </a>
@@ -180,6 +141,44 @@
       <div class="overlay" data-nav-toggler data-overlay></div>
     </div>
   </header>
+
+  <!-- Main Content -->
+  <main>
+    <section class="menus-section">
+      <div class="container">
+        <h1 class="headline-1">Our Menus</h1>
+        <p class="body-1">
+          Discover our diverse range of exquisite dishes crafted with the
+          finest ingredients.
+        </p>
+
+        <!-- Menu Items -->
+        <div class="menu-items">
+          <div class="menu-item">
+            <img src="img/dimsum.png" alt="Dim Sum" class="menu-image" />
+            <h2 class="title-2">Dim Sum Selection</h2>
+            <p class="body-2">
+              A variety of steamed and fried dumplings.
+            </p>
+          </div>
+          <div class="menu-item">
+            <img src="img/duck.png" alt="Peking Duck" class="menu-image" />
+            <h2 class="title-2">Peking Duck</h2>
+            <p class="body-2">
+              Crispy duck served with pancakes and hoisin sauce.
+            </p>
+          </div>
+          <div class="menu-item">
+            <img src="img/sushi.png" alt="Sushi Platter" class="menu-image" />
+            <h2 class="title-2">Sushi Platter</h2>
+            <p class="body-2">
+              An assortment of fresh sushi rolls and sashimi.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- Include your JavaScript file -->
   <script src="js/script.js"></script>
