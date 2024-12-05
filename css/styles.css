@@ -371,7 +371,7 @@ body.nav-active {
   position: fixed;
   background-color: rgb(24, 24, 24);
   top: 0;
-  left: -360px;
+  right: -360px;
   bottom: 0;
   max-width: 360px;
   width: 100%;
@@ -385,7 +385,7 @@ body.nav-active {
 
 .navbar.active {
   visibility: visible;
-  transform: translateX(360px);
+  transform: translateX(-360px);
 }
 
 .navbar .close-btn {
