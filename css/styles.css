@@ -651,3 +651,118 @@ body.nav-active {
     max-width: 100%;
   }
 }
+
+
+/*-----------------------------------*\
+  #CONTACT SECTION
+\*-----------------------------------*/
+
+.contact-section h1 {
+  margin-top: 20px; 
+  margin-bottom: 10px; 
+  font-size: 2.5rem; 
+  text-align: center; 
+}
+
+.contact-section p {
+  margin-bottom: 20px; 
+  font-size: 2rem; 
+  text-align: center; 
+}
+
+.logo img {
+  margin-bottom: 20px; 
+  max-width: 100%; 
+  height: auto; 
+}
+.contact-section {
+  padding: 60px 20px;
+  background-color: #121212;
+  color: white;
+  position: relative;
+}
+
+/* Title Styling for Top-Right Position */
+.contact-header {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.contact-header .headline-1 {
+  font-size: 2.4rem; 
+  color: #d94c4c;
+  text-transform: uppercase;
+}
+
+/* Form Styling */
+.contact-form {
+  max-width: 800px;
+  margin: 80px auto 0; 
+}
+
+/* Form Grid for Two Columns */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.6rem;
+}
+
+.form-group input, 
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1.6rem;
+  color: black;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Ensure the textarea spans both columns */
+textarea {
+  grid-column: span 2;
+}
+
+/* Button Styling */
+.contact-form button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 1.6rem;
+  color: white;
+  background: #d94c4c;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #b63b3b;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  textarea {
+    grid-column: span 1;
+  }
+
+  .contact-header {
+    top: 10px;
+    right: 10px;
+  }
+}
