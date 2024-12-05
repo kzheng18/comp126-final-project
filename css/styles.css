@@ -486,12 +486,23 @@ body.nav-active {
 .navbar::-webkit-scrollbar-thumb {
   background-color: rgb(217, 76, 76);
 }
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: black;
+  opacity: 0;
+  pointer-events: none;
+  transition: 500ms ease;
+  z-index: 1;
+}
 
 .overlay.active {
   opacity: 1;
   pointer-events: all;
 }
-
 
 /*-----------------------------------*\
   #MENU SECTION
@@ -527,35 +538,11 @@ body.nav-active {
   color: #ccc;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .menu-item {
-    flex: 1 1 45%;
-    max-width: 45%;
-  }
-}
-
-@media (max-width: 480px) {
-  .menu-items {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .menu-item {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
-}
-
 /*-----------------------------------*\
   #MAIN CONTENT ADJUSTMENT
 \*-----------------------------------*/
-
-/* Option 1: Add padding to the main element */
-
-/* Option 2: If you prefer to target the specific section */
 .menus-section {
-  padding-top: 120px; /* Adjust this value as needed */
+  padding-top: 120px;
 }
 
 /*-----------------------------------*\
@@ -563,8 +550,7 @@ body.nav-active {
 \*-----------------------------------*/
 
 .chefs-section {
-  /* Optional: Add padding-top to prevent overlap with fixed header */
-  padding-top: 120px; /* Adjust this value as needed */
+  padding-top: 120px;
 }
 
 .chefs-profiles {
@@ -597,40 +583,20 @@ body.nav-active {
   color: #ccc;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .chef-profile {
-    flex: 1 1 45%;
-    max-width: 45%;
-  }
-}
-
-@media (max-width: 480px) {
-  .chefs-profiles {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .chef-profile {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
-}
-
 /*-----------------------------------*\
   #ABOUT SECTION
 \*-----------------------------------*/
 
 .about-section {
-  padding-top: 120px; /* Adjust this value to match the header height */
+  padding-top: 120px;
 }
 
 .about-image-container {
   width: 100%;
-  max-width: 1200px; /* Adjust max width as needed */
+  max-width: 1200px;
   margin: 0 auto;
   overflow: hidden;
-  border-radius: 8px; /* Optional: Add rounded corners */
+  border-radius: 8px;
 }
 
 .about-image {
@@ -645,35 +611,27 @@ body.nav-active {
   line-height: 1.6em;
 }
 
-/* Responsive adjustments if needed */
-@media (max-width: 768px) {
-  .about-image-container {
-    max-width: 100%;
-  }
-}
-
-
 /*-----------------------------------*\
   #CONTACT SECTION
 \*-----------------------------------*/
 
 .contact-section h1 {
-  margin-top: 20px; 
-  margin-bottom: 10px; 
-  font-size: 2.5rem; 
-  text-align: center; 
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+  text-align: center;
 }
 
 .contact-section p {
-  margin-bottom: 20px; 
-  font-size: 2rem; 
-  text-align: center; 
+  margin-bottom: 20px;
+  font-size: 2rem;
+  text-align: center;
 }
 
 .logo img {
-  margin-bottom: 20px; 
-  max-width: 100%; 
-  height: auto; 
+  margin-bottom: 20px;
+  max-width: 100%;
+  height: auto;
 }
 .contact-section {
   padding: 60px 20px;
@@ -682,7 +640,6 @@ body.nav-active {
   position: relative;
 }
 
-/* Title Styling for Top-Right Position */
 .contact-header {
   position: absolute;
   top: 20px;
@@ -690,18 +647,16 @@ body.nav-active {
 }
 
 .contact-header .headline-1 {
-  font-size: 2.4rem; 
+  font-size: 2.4rem;
   color: #d94c4c;
   text-transform: uppercase;
 }
 
-/* Form Styling */
 .contact-form {
   max-width: 800px;
-  margin: 80px auto 0; 
+  margin: 80px auto 0;
 }
 
-/* Form Grid for Two Columns */
 .form-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -718,7 +673,7 @@ body.nav-active {
   font-size: 1.6rem;
 }
 
-.form-group input, 
+.form-group input,
 .form-group textarea {
   width: 100%;
   padding: 10px;
@@ -729,12 +684,10 @@ body.nav-active {
   border-radius: 5px;
 }
 
-/* Ensure the textarea spans both columns */
 textarea {
   grid-column: span 2;
 }
 
-/* Button Styling */
 .contact-form button {
   display: block;
   width: 100%;
@@ -751,8 +704,127 @@ textarea {
   background: #b63b3b;
 }
 
-/* Responsive Adjustments */
+/*-----------------------------------*\
+  #FOOTER SECTION
+\*-----------------------------------*/
+
+.footer {
+  background-color: #121212;
+  color: #fff;
+  padding: 40px 20px;
+  border-top: 1px solid #d94c4c;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-column {
+  flex: 1 1 22%;
+  max-width: 22%;
+}
+
+.footer-title {
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  color: #d94c4c;
+}
+
+.footer-description {
+  font-size: 1.4rem;
+  line-height: 1.6;
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-link {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.footer-link:hover {
+  color: #d94c4c;
+}
+
+.footer-address p {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-link {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.social-link:hover {
+  color: #d94c4c;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+@media (max-width: 480px) {
+  .chefs-profiles {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .chef-profile {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .menu-items {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-item {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-column {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
 @media (max-width: 768px) {
+  .about-image-container {
+    max-width: 100%;
+  }
+
+  .chef-profile {
+    flex: 1 1 45%;
+    max-width: 45%;
+  }
+
+  .menu-item {
+    flex: 1 1 45%;
+    max-width: 45%;
+  }
+
   .form-grid {
     grid-template-columns: 1fr;
   }
@@ -764,5 +836,10 @@ textarea {
   .contact-header {
     top: 10px;
     right: 10px;
+  }
+
+  .footer-column {
+    flex: 1 1 45%;
+    max-width: 45%;
   }
 }
